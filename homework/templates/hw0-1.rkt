@@ -36,15 +36,21 @@ This is a comment that spans multiple lines.
 
 ;; Exercise 1 - Define sum-of-squares
 (define (square x) (* x x))
-
+(define (sum-of-squares x y)
+  (+ (square x) (square y)))
 
 ;; Exercise 2a - Define can-drive
-
-
+(define (can-drive age)                                                                                  (if (< age 16)                                                                                           '(Not yet)                                                                                               '(Good to go)                                                                                            ))
 
 ;; Exercise 2b - Define fizzbuzz
-
-
+(define (fizzbuzz num)
+  (cond ((and (= (remainder num 5) 0) (= (remainder num 3) 0))
+      'fizzbuzz)
+      ((= (remainder num 5) 0)
+      'buzz)
+      ((= (remainder num 3) 0)
+      'fizz)
+      (else num)))
 ;; Exercise 3 - Why did the Walrus cross the Serengeti?
 
 #|
